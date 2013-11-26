@@ -1,3 +1,2 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/libcap:"
 
-SRC_URI += "file://fix-lack-libattr.patch"
+EXTRA_OEMAKE_append += "LDFLAGS='${LDFLAGS} -Wl,-rpath-link=${STAGING_DIR_HOST}/lib64'"
